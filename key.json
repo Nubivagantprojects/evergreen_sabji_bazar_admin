@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "evergreen-sabji-bazar",
+  "private_key_id": "173062972fd0b3827564d01caec966e32bb63383",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDk7u9ayZJ4p46w\n3G1HV/JmDnwFOQ74jHB6a0wc35Xwjh56dXLx6osYIW51je6NVA4MMOpfRATaOawQ\noA1cjHVnDfQFitK8wAUpmIqZUs7PP1vqO+i5PZ3QdJHgYKivVYs28rGfxyEDPVfr\nO4Gw1CcT/ZIju0gWGjroxqdJVM0mN6YAkHIplw53tjbofhMAD4biHfZruOM5wSng\nEHEhS949I0+HUrN4fsdFRxzVh/auhXAkk5Ll04vk4ZAMSVPPodkQXSgQ3/kEcFZ+\nw/nQOFMd+gx5GiRvL6b0cpQm07Z9sc3/a7MIpn2JlCJSx/1d7dHlwU3uXCL1n0J8\n8w449VfpAgMBAAECggEAE0xS7/fC+ZnCTQVfzt5KiDDbYoNTUD9icedelKaCWLNa\nPV9uL5diX0feLFmpDM/TmVJ8R0iQEic/am1bgvwyH1xNQDRaHGAhb0a1FESnO1Av\netjO/uKDTaGt9Fihj5op8JlXwMzD6yZ+JU2wWowfuS8sZQeyBW7znVC1pFhaLMjm\nQjguG/iPkmjFlO8itO9FtZKdofxuJpo8CU9ssT3HGzO4sI99sbzcqUxKERnMvD9U\ndoxT0tBbqbh9jX3Z4dMCDtQO4rfv5Es0sBtp+OEeUd22fy/78Bakc0mV7FDGd2Hb\ntj1QfMNxGpCJve0xS4ebb/n61gR0nzpM0UfMzaJp8wKBgQD8/UkbsNYSmw1jFFBB\nr8dBoikq2QfcUeyTdVQ2IjvsSugoAAexAnvyi/B23XiL+GZgDsMnDedZp6Vju2i3\nWAFquu4DGiNISGN/5UHapWeWo2UWyB+Ek/llSBPvboFO69FDzhX9V9cNgsGKzXQ9\naXdQd2ak2J435Dexfu+OYAx2IwKBgQDnqF1Dms4edJbZK+OBp07YDx98swKTzEOW\nFyolgrCQMeitCpYXGCwCA1Iu0DERCw7Jv4piwSN6013NdfP8nNeOhhWzPClB804P\nsrBXXOdXKMTPps73nnsdUtdM727X+yT0fWwaqOmr8VaBQazZejmeHG45aHGLiBUa\nnY2zolvMgwKBgCUmrM28MjOZQWYDXaXHwmMJBTKdnGHmRe+Bk1Q/wrz4Yw88seR0\nkO8VTcKm00T6vU3t3QqnKAoqbEcxBjemXM7nlHwwIm5C8xmc+Qa6s3OTmwy1Zqt5\nb25IH2VRvPtx9dEXOnNxqsr5IKLZePBrxHG0lwYuKU3b3bHbCiLGSA4xAoGBAKJw\noe1c6PncIUbpip+ItTW17Qtg7wa6bg4Z8jjZWnvSM2jbioFpNrq2n3MqE63yxgzc\nHeq/qeRfwF/pPQw+4rwS87Z6Eigntu41C4hHIgUxFkjRnEFwRL48L7LIFj6m4bP7\nGsna9ffWxCTg65aYKTzgjL3+qdgAtWOzZQC4cYyHAoGAXi1cluFgAYULYBC2MeMO\neign83HI7NBme+nOdosHeMXyH+LCrShk5Bv3lPVo8qrr6aLCwMjcTjk1lCOG/0Fa\nJPFurut4InyZT1K32r4nhWCvBGTv3lOfhBLnTyXyYShl+wfc56iVs3YcOMGKe9R6\n0RbLHrXxkN1aib66ZriXe84=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-48spm@evergreen-sabji-bazar.iam.gserviceaccount.com",
+  "client_id": "118306160184284039738",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-48spm%40evergreen-sabji-bazar.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

@@ -1,0 +1,94 @@
+input[type=text], input[type=date], input[type=time], input[type=file], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .changepassword-submit-btn {
+    background-color: #282d36;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  .changepassword-submit-btn:hover {
+    
+    background-color: #000000;
+    
+  }
+
+  .changepassword-submit-btn:disabled {
+    cursor: no-drop;
+    background-color: #656969;
+    color: white;
+  }
+
+  .preview-btn {
+    background-color: #f36411;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  .preview-btn:hover {
+    background-color: #cf6d2b;
+    color: white;
+  }
+  
+  .form1 {
+    border-radius: 5px;
+    background-color: #d4d4d4;
+    padding: 20px;
+  }
+
+  .form2 {
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 20px;
+  }
+  
+  .next:hover {
+    color: #ffffff;
+    background-color: #0069d9;
+    border-color: #0062cc;
+  }
+
+  .next {
+    background-color: #007bff;
+    border: none;
+    color: #ffffff;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-color: #007bff;
+    box-shadow: none;
+    cursor: pointer;
+  }
+
+  .skip:hover {
+    background-color: #000000;
+    color: white;
+  }
+
+  .skip {
+    background-color: #282d36;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  

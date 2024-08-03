@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Evergreen Sabji Bazar offers fresh vegetables, fruits, and groceries in Hazaribagh. Order online for home delivery or pickup at your convenience." />
+  <meta name="keywords" content="Evergreen Sabji Bazar, Hazaribagh, fresh vegetables, fruits, groceries, online vegetable store, home delivery, fresh produce" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Evergreen Sabji Bazar | Shop | Admin</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../static/admin_login/plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css' %}">
+  <!-- Tempusdominus Bbootstrap 4 -->
+  <link rel="stylesheet"
+    href="../static/admin_login/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="../static/admin_login/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- Form style -->
+  <link rel="stylesheet" href="../static/admin_login/dist/css/formstyle.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="../static/admin_login/plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../static/admin_login/dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="../static/admin_login/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="../static/admin_login/plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="../static/admin_login/plugins/summernote/summernote-bs4.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image" href="../static/admin_login/dist/img/favicon.png">
+</head>
+
+
+<body class="hold-transition sidebar-mini layout-fixed">
+  <div class="wrapper">
+
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-warning navbar-light">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+      </ul>
+
+
+
+      <!-- Right navbar links -->
+
+    </nav>
+    <!-- /.navbar -->
+
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+      <!-- Brand Logo -->
+      <a href="/" class="brand-link">
+    <img src="../static/admin_login/dist/img/file.png" alt="Plant Nursary Kolkata" class="brand-image img-circle elevation-3"
+    style="opacity: .8">
+    <!-- <i class="fal fa-file-chart-pie"></i> -->    <span class="brand-text font-weight-light">EvergreenSabjiBazar</span>
+  </a>
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+          <div class="info">
+            <a href="#" class="d-block">{{user.first_name}}</a>
+          </div>
+        </div>
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <!-- Add icons to the links using the .nav-icon class
+        with font-awesome or any other icon font library -->
+            <li class="nav-item has-treeview menu-open">
+              <a href="#" class="nav-link active">
+                <i class="nav-icon fas fa-th"></i>
+                <p>
+                  Items
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="product_entry" class="nav-link active">
+                    <i class="fas fa-edit nav-icon"></i>
+                    <p>Item Entry</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="product_view" class="nav-link">
+                    <i class="fas fa-table nav-icon"></i>
+                    <p>Item View</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Orders Nav Item -->
+            <li class="nav-item has-treeview">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-th"></i>
+                <p>
+                  Orders
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                {{!-- <li class="nav-item">
+                  <a href="unverified_order" class="nav-link">
+                    <i class="far fa-circle nav-icon text-warning"></i>
+                    <p>Unverified Orders</p>
+                  </a>
+                </li> --}}
+                <li class="nav-item">
+                  <a href="verified_order" class="nav-link">
+                    <i class="far fa-circle nav-icon text-info"></i>
+                    <p>Verified Orders</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="in_transit_order" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>In-Transit Orders</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="delivered_order" class="nav-link">
+                    <i class="far fa-circle nav-icon text-success"></i>
+                    <p>Delivered Orders</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="cancelled_order" class="nav-link">
+                    <i class="far fa-circle nav-icon text-danger"></i>
+                    <p>Cancelled Orders</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-header d-flex"></li>
+            <li class="nav-item">
+              <a href="/" class="nav-link">
+                <i class="nav-icon fas fa-sign-out-alt text-danger"></i>
+                <p>Logout</p>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+      </div>
+      <!-- /.sidebar -->
+    </aside>
+
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <div class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1 class="m-0 text-dark">Item Entry</h1>
+            </div><!-- /.col -->
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-right">
+
+                <li class="breadcrumb-item active">Item Entry</li>
+              </ol>
+            </div><!-- /.col -->
+          </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+      </div>
+      <div class="container">
+        {{#if err }}
+        {{#each details}}
+        <h4><strong>
+            <font color="red">{{message}}</font>
+          </strong>
+          <h4>
+            {{/each }}
+            {{else}}
+            {{#each details}}
+            <h4><strong>
+                <font color="green">{{message}}</font>
+              </strong>
+              <h4>
+                {{/each }}
+                {{/if}}
+      </div>
+      <!-- /.content-header -->
+
+
+      <section class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card card-primary">
+                <div class="card-header">
+                  <h3 class="card-title">Category Total Info</h3>
+                  <div class="card-tools">
+                    <button type="button" class="btn btn-warning" data-card-widget="collapse"><strong><i
+                          class="fas fa-minus" style="color:#FFF;"></i></strong></button>
+
+                  </div>
+                </div>
+                <!-- /.card-header -->
+
+
+                <div class="card-body">
+                  <form action="/admin_main/category_entry_submit" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                      <label for="item_name">Category Name<font color="red">*</font></label>
+                      <input type="text" class="form-control" name="cat_name" placeholder="Enter Category Name"
+                        id="item_name" required>
+                      <span id="errsitid" class="text-danger font-weight-bold"></span>
+                    </div>
+                    <label>Category Image:<font color="red">*</font></label>
+                    <div class="row">
+                      <div class="col-sm-6">
+
+                        <img name="cat_img" id="output_image_cat" height="200" width="200" style="margin-bottom:15px;"
+                          alt="Preview" />
+
+                      </div>
+                      <div class="col-sm-3">
+                        <input type="file" accept="image/jpeg" name="cat_img" onchange="preview_image_cat(event)"><br>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <button type="submit" class="changepassword-submit-btn">Save Category</button>
+                    </div>
+                  </form>
+                </div>
+
+
+              </div>
+            </div>
+
+            <!-- /.col -->
+            <!-- /.col -->
+          </div>
+        </div>
+      </section>
+      <!-- Main content -->
+      <section class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card card-primary">
+                <div class="card-header">
+                  <h3 class="card-title">Item Total Info</h3>
+                  <div class="card-tools">
+                    <button type="button" class="btn btn-warning" data-card-widget="collapse"><strong><i
+                          class="fas fa-minus" style="color:#FFF;"></i></strong></button>
+
+                  </div>
+                </div>
+                <!-- /.card-header -->
+
+
+                <div class="card-body">
+                  <form action="/admin_main/product_entry_submit" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                      <label for="item_name">Item Name<font color="red">*</font></label>
+                      <input type="text" class="form-control" name="item_name" placeholder="Enter Item Name"
+                        id="item_name" required>
+                      <span id="errsitid" class="text-danger font-weight-bold"></span>
+                    </div>
+                    <div class="form-group">
+                      <label for="site name">Item Price<font color="red">*</font></label>
+                      <div class="row">
+                        <div class="col-md-3">
+                          <input type="number" class="form-control" name="item_price" placeholder="Enter Item Price"
+                            id="stnm" required>
+                          <span id="errstnm" class="text-danger font-weight-bold"></span>
+                        </div>
+
+                        <div class="col-md-3">
+                          <select name="item_price_unit" id="region" required>
+                            <option value="" selected disabled>Select Price Unit</option>
+                            <option value="/ Piece">/ Piece</option>
+                            <option value="/ Pair">/ Pair</option>
+                            <option value="/ 10">/ 10</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="item_disc">Item High Price<font color="red">*</font></label>
+                      <input type="number" class="form-control" name="item_disc" placeholder="Enter Item High Price"
+                        id="item_disc" required>
+                      <span id="errsithp" class="text-danger font-weight-bold"></span>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="item_catagory">Item Catagory<font color="red">*</font></label>
+                      <select name="item_catagory" id="region1">
+                        <option value="" selected disabled>Select Catagory</option>
+                        {{#each details }}
+                        <option value="{{this.cat_name}}">{{this.cat_name}}</option>
+                        {{/each}}
+                      </select>
+                      <span id="errregn" class="text-danger font-weight-bold"></span>
+                    </div>
+                    <div class="form-group">
+                      <label>Item Description:<font color="red">*</font></label>
+                      <textarea name="item_desc" placeholder="Enter Item Description here" class="form-control"
+                        required></textarea>
+                    </div>
+                    <div class="group-input">
+                      <label>Is the Item Currently Available in your stock?<font color="red">*</font></label><br>
+                      <div class="row">
+                        <div class="col-md-2">
+                          <div class="icheck-primary d-inline">
+                            <input type="radio" id="Yes1" name="item_avail" value="1" required>
+                            <label for="Yes1">
+                              Yes
+                            </label>
+                          </div>
+
+                        </div>
+                        <div class="col-md-2">
+
+                          <div class="icheck-primary d-inline">
+                            <input type="radio" id="No1" name="item_avail" value="0">
+                            <label for="No1">
+                              No
+                            </label>
+                          </div>
+                        </div>
+                      </div><br>
+                    </div>
+                    <div class="form-group">
+                      <label>Item Image:<font color="red">*</font></label>
+                      <div class="row">
+                        <div class="col-sm-6">
+
+                          <img name="item_img" id="output_image" height="200" width="200" style="margin-bottom:15px;"
+                            alt="Preview" />
+
+                        </div>
+                        <div class="col-sm-3">
+                          <input type="file" accept="image/jpeg" name="item_img" onchange="preview_image(event)"><br>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6">
+
+                          <img name="item_img_1" id="output_image_1" height="200" width="200"
+                            style="margin-bottom:15px;" alt="Preview" />
+
+                        </div>
+                        <div class="col-sm-3">
+                          <input type="file" accept="image/jpeg" name="item_img_1"
+                            onchange="preview_image_1(event)"><br>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6">
+
+                          <img name="item_img_2" id="output_image_2" height="200" width="200"
+                            style="margin-bottom:15px;" alt="Preview" />
+
+                        </div>
+                        <div class="col-sm-3">
+                          <input type="file" accept="image/jpeg" name="item_img_2"
+                            onchange="preview_image_2(event)"><br>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6">
+
+                          <img name="item_img_3" id="output_image_3" height="200" width="200"
+                            style="margin-bottom:15px;" alt="Preview" />
+
+                        </div>
+                        <div class="col-sm-3">
+                          <input type="file" accept="image/jpeg" name="item_img_3"
+                            onchange="preview_image_3(event)"><br>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="tag_1">Tag 1<font color="red">*</font></label>
+                        <input type="text" class="form-control" name="tag_1" placeholder="Enter Tag 1" id="tag_1"
+                          required>
+                        <span id="errsitid" class="text-danger font-weight-bold"></span>
+                      </div>
+                      <div class="form-group">
+                        <label for="tag_2">Tag 2<font color="red">*</font></label>
+                        <input type="text" class="form-control" name="tag_2" placeholder="Enter Tag 2" id="tag_2"
+                          required>
+                        <span id="errsitid" class="text-danger font-weight-bold"></span>
+                      </div>
+                      <div class="form-group">
+                        <label for="tag_3">Tag 3<font color="red">*</font></label>
+                        <input type="text" class="form-control" name="tag_3" placeholder="Enter Tag 3" id="tag_3"
+                          required>
+                        <span id="errsitid" class="text-danger font-weight-bold"></span>
+                      </div>
+                      <div class="form-group">
+                        <label for="tag_4">Tag 4</label>
+                        <input type="text" class="form-control" name="tag_4" placeholder="Enter Tag 4" id="tag_4">
+                        <span id="errsitid" class="text-danger font-weight-bold"></span>
+                      </div>
+                      <div class="form-group">
+                        <label for="tag_5">Tag 5</label>
+                        <input type="text" class="form-control" name="tag_5" placeholder="Enter Tag 5" id="tag_5">
+                        <span id="errsitid" class="text-danger font-weight-bold"></span>
+                      </div>
+                      <div class="form-group">
+                        <label for="tag_6">Tag 6</label>
+                        <input type="text" class="form-control" name="tag_6" placeholder="Enter Tag 6" id="tag_6">
+                        <span id="errsitid" class="text-danger font-weight-bold"></span>
+                      </div>
+                      <div class="form-group">
+                        <label for="tag_7">Tag 7</label>
+                        <input type="text" class="form-control" name="tag_7" placeholder="Enter Tag 7" id="tag_7">
+                        <span id="errsitid" class="text-danger font-weight-bold"></span>
+                      </div>
+                      <div class="form-group">
+                        <label for="tag_8">Tag 8</label>
+                        <input type="text" class="form-control" name="tag_8" placeholder="Enter Tag 8" id="tag_8">
+                        <span id="errsitid" class="text-danger font-weight-bold"></span>
+                      </div>
+                      <div class="form-group">
+                        <label for="tag_9">Tag 9</label>
+                        <input type="text" class="form-control" name="tag_9" placeholder="Enter Tag 9" id="tag_9">
+                        <span id="errsitid" class="text-danger font-weight-bold"></span>
+                      </div>
+                      <div class="form-group">
+                        <label for="tag_10">Tag 10</label>
+                        <input type="text" class="form-control" name="tag_10" placeholder="Enter Tag 10" id="tag_10">
+                        <span id="errsitid" class="text-danger font-weight-bold"></span>
+                      </div>
+                    </div><br><br>
+                    <div class="row">
+                      <button type="submit" class="changepassword-submit-btn">Save Item</button>
+                    </div>
+                  </form>
+                </div>
+
+
+              </div>
+            </div>
+
+            <!-- /.col -->
+            <!-- /.col -->
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- /. Main content Ends here-->
+    </div>
+    <!-- /.content-wrapper -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+      <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+  </div>
+  <!-- ./wrapper -->
+
+  <!-- jQuery -->
+  <script src="../static/admin_login/plugins/jquery/jquery.min.js"></script>
+  <!-- jQuery UI 1.11.4 -->
+  <script src="../static/admin_login/plugins/jquery-ui/jquery-ui.min.js"></script>
+  <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+  <script>
+    $.widget.bridge('uibutton', $.ui.button)
+  </script>
+  <!-- Bootstrap 4 -->
+  <script src="../static/admin_login/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- ChartJS -->
+  <script src="../static/admin_login/plugins/chart.js/Chart.min.js"></script>
+  <!-- Sparkline -->
+  <script src="../static/admin_login/plugins/sparklines/sparkline.js"></script>
+  <!-- JQVMap -->
+  <script src="../static/admin_login/plugins/jqvmap/jquery.vmap.min.js"></script>
+  <script src="../static/admin_login/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+  <!-- jQuery Knob Chart -->
+  <script src="../static/admin_login/plugins/jquery-knob/jquery.knob.min.js"></script>
+  <!-- daterangepicker -->
+  <script src="../static/admin_login/plugins/moment/moment.min.js"></script>
+  <script src="../static/admin_login/plugins/daterangepicker/daterangepicker.js"></script>
+  <!-- Tempusdominus Bootstrap 4 -->
+  <script src="../static/admin_login/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+  <!-- Summernote -->
+  <script src="../static/admin_login/plugins/summernote/summernote-bs4.min.js"></script>
+  <!-- overlayScrollbars -->
+  <script src="../static/admin_login/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="../static/admin_login/dist/js/adminlte.js"></script>
+  <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+  <script src="../static/admin_login/dist/js/pages/dashboard.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="../static/admin_login/dist/js/demo.js"></script>
+
+
+  <script type="text/javascript">
+    function preview_image(event) {
+      var reader = new FileReader();
+      reader.onload = function () {
+        var output = document.getElementById('output_image');
+        output.src = reader.result;
+      }
+      reader.readAsDataURL(event.target.files[0]);
+    }
+  </script>
+  <script type="text/javascript">
+    function preview_image_1(event) {
+      var reader = new FileReader();
+      reader.onload = function () {
+        var output = document.getElementById('output_image_1');
+        output.src = reader.result;
+      }
+      reader.readAsDataURL(event.target.files[0]);
+    }
+  </script>
+  <script type="text/javascript">
+    function preview_image_2(event) {
+      var reader = new FileReader();
+      reader.onload = function () {
+        var output = document.getElementById('output_image_2');
+        output.src = reader.result;
+      }
+      reader.readAsDataURL(event.target.files[0]);
+    }
+  </script>
+  <script type="text/javascript">
+    function preview_image_3(event) {
+      var reader = new FileReader();
+      reader.onload = function () {
+        var output = document.getElementById('output_image_3');
+        output.src = reader.result;
+      }
+      reader.readAsDataURL(event.target.files[0]);
+    }
+  </script>
+  <script type="text/javascript">
+    function preview_image_cat(event) {
+      var reader = new FileReader();
+      reader.onload = function () {
+        var output = document.getElementById('output_image_cat');
+        output.src = reader.result;
+      }
+      reader.readAsDataURL(event.target.files[0]);
+    }
+  </script>
+  <script type="text/javascript">
+    document.addEventListener("contextmenu", function (mydocument) {
+      mydocument.preventDefault();
+    });
+  </script>
+
+
+</body>
+
+</html>
