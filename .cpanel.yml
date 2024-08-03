@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/mefbplwl/public_html/
+    - /bin/cp index.html $DEPLOYPATH
