@@ -3,7 +3,8 @@ const hbs = require("hbs")
 const app = express()
 const bodyparser = require('body-parser')
 const port = 5557
-const routes = require('D:\\ReactJs\\Evergreen Sabji Bazar\\Evergreen-Sabji-Bazar-Admin\\src\\routes\\main')
+const routes = require('./src/routes/main');
+
 
 app.use(express.json());       
 app.use(express.urlencoded({extended: true})); 
