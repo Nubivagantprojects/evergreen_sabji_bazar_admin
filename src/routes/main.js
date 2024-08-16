@@ -32,8 +32,24 @@ const filesave = multer.memoryStorage();
 const upload = multer({ storage: filesave });
 
 routes.get("/", async (req, res) => {
-  res.redirect("/admin_main/product_view");
+  res.redirect("/admin_main/admin_login");
 });
+routes.get("/admin_main/admin_login", (req, res) => {
+  res.render("admin_main/admin_login"); // Adjust the path to match the file location
+});
+routes.post("/admin_main/admin_login", async (req, res) => {
+  const { userlogname, userlogpass } = req.body;
+
+  // Validate the login credentials
+  if (userlogname === "sabji@gmail.com" && userlogpass === "sabji@0987") {
+    // If credentials are correct, redirect to the product view page
+    res.redirect("/admin_main/product_view");
+  } else {
+    // If credentials are incorrect, redirect back to the login page with an error message
+    res.redirect("/admin_main/admin_login?error=invalid_credentials");
+  }
+});
+
 routes.post("/search", async (req, res) => {
   const searchQuery = req.body.search;
   if (searchQuery) {
