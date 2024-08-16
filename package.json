@@ -5,7 +5,7 @@
   "main": "src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon src/app.js -e js,hbs"
+    "start": "nodemon app.js -e js,hbs"
   },
   "author": "IndFinity (Development Unit)",
   "license": "ISC",
